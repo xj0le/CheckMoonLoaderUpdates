@@ -47,8 +47,8 @@ function UI_Thread(NewVersion)
 					void* __stdcall ShellExecuteA(void* hwnd, const char* op, const char* file, const char* params, const char* dir, int show_cmd);
 					uint32_t __stdcall CoInitializeEx(void*, uint32_t);
 				]]
-				local Shell32 = ffi.load "Shell32"
-				local Ole32 = ffi.load "Ole32"
+				local Shell32 = ffi.load("Shell32")
+				local Ole32 = ffi.load("Ole32")
 				Ole32.CoInitializeEx(nil, 2 + 4)
 				print(Shell32.ShellExecuteA(nil, "open", "http://blast.hk/moonloader", nil, nil, 1))
 			end
